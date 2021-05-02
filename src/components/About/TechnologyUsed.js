@@ -27,7 +27,7 @@ const TechnologyUsed = () => {
     <div>
       <h1>My Skills</h1>
       <h3>Front-end Skills</h3>
-      <hr />
+      <hr style={{backgroundColor:"white"}}/>
       <div className="tools-img">
         <IndividualTools img={reactImg} name="React" />
         <IndividualTools img={reduxImg} name="Redux" />
@@ -40,7 +40,7 @@ const TechnologyUsed = () => {
         <IndividualTools img={css3Img} name="CSS3" />
       </div>
       <h3>Back-end Skills</h3>
-      <hr />
+      <hr style={{backgroundColor:"white"}}/>
       <div className="tools-img">
         <IndividualTools img={nodeImg} name="Node.js" />
         <IndividualTools img={expressImg} name="Express.js" />
@@ -49,7 +49,7 @@ const TechnologyUsed = () => {
       </div>
 
       <h3>Tools</h3>
-      <hr/>
+      <hr style={{backgroundColor:"white"}}/>
       <div className="tools-img">
         <IndividualTools img={vsCodeImg} name="Visual Studio Code" />
         <IndividualTools img={gitImg} name="Git" />

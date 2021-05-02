@@ -1,6 +1,9 @@
 import { Box, Button, Divider, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
 import { shadows } from '@material-ui/system';
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -15,24 +18,33 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const IndividualProject = ({ projectData }) => {
-  const { image } = projectData;
+  const { image,liveLink,githubLink,title,description,technology } = projectData;
   const classes = useStyles();
   return (
     <Grid item md={6}>
+      <div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
       <Box boxShadow={3} p={5}>
       <img src={image} alt="" style={{ width: "100%" }} />
-      <h3 className="text-center">{projectData.title}</h3>
+      <h3 className="text-center">{title}</h3>
       <Divider p={5}/>
-      <p>{projectData.description}</p>
+      <p>{description}</p>
       <div className="social-btn">
-        {projectData.technology.map((technology) => (
+        {technology.map((technology) => (
           <button className={classes.button}>{technology}</button>
         ))}
       </div>
-      <button className="btn-green">Live Link</button>
-      <button className="btn-white">Github</button>
+      <a href={liveLink} rel="noreferrer" target="_blank">
+      <button className="btn-green" >Live Link</button>
+      </a>
+     <a href={githubLink} rel="noreferrer" target="_blank">
+     <button className="btn-white">Github</button>
+     </a>
+     
       
       </Box>
+      </div>
     </Grid>
   );
 };

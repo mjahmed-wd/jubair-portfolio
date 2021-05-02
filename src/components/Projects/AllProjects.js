@@ -1,17 +1,24 @@
-import { Button, Container, Grid } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import React from "react";
 import IndividualProject from "./IndividualProject/IndividualProject";
+import imageTravellersNest from "../../images/projects/travellersNest1.png";
 import imageFashionFare from "../../images/projects/fashionFare.png";
-import imageTravellersNest from "../../images/projects/travellersNest1.png"
-import { useHistory } from "react-router";
+import imageSirajAlIslam from "../../images/projects/sirajalislam.png";
 
-const Projects = () => {
-  const history=useHistory()
+const AllProjects = () => {
   const allProjects = [
     {
       title: "Travellers Nest",
-      description: "Hotel Booking Website with dynamic Admin Panel and Payment Gateway",
-      technology: ["React JS", "Node JS","Express", "Firebase", "Stripe", "MongoDB"],
+      description:
+        "Hotel Booking Website with dynamic Admin Panel and Payment Gateway",
+      technology: [
+        "React JS",
+        "Node JS",
+        "Express",
+        "Firebase",
+        "Stripe",
+        "MongoDB",
+      ],
       liveLink: "https://travellers-nest.web.app",
       githubLink: "https://github.com",
       image: imageTravellersNest,
@@ -24,12 +31,20 @@ const Projects = () => {
       githubLink: "https://github.com",
       image: imageFashionFare,
     },
+    {
+      title: "Lawyer Portfolio",
+      description: "A static lawyer Portfolio website",
+      technology: ["React JS", "JavaScript"],
+      liveLink: "https://sirajalislam.com",
+      githubLink: "https://github.com",
+      image: imageSirajAlIslam,
+    },
   ];
   return (
     <Container fixed>
+      <div  style={{margin: "50px 0"}}>
       <h1
         style={{
-          marginTop: "50px",
           textAlign: "center",
           fontSize: "2.5rem",
           fontWeight: "800",
@@ -43,11 +58,10 @@ const Projects = () => {
           <IndividualProject key={index} projectData={individualProject} />
         ))}
       </Grid>
-     <div style={{ textAlign: "center", margin:"50px"}} >
-     <button className="btn-green" style={{width:"50%"}} onClick={()=>history.push("/projects")}>View All Projects</button>
-     </div>
+      
+      </div>
     </Container>
   );
 };
 
-export default Projects;
+export default AllProjects;

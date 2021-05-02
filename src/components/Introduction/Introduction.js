@@ -7,7 +7,9 @@ import profilePic from "../../images/ProfilePic.jpg";
 import { Facebook, GitHub, LinkedIn, Twitter } from "@material-ui/icons";
 import introBg from "../../images/projects/introBg.jpg";
 import Typewriter from "typewriter-effect";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -36,7 +38,7 @@ const Introduction = () => {
                 bgcolor=""
                 css={{ height: "100%" }}
               >
-                <img
+                <img data-aos="zoom-in"
                   src={profilePic}
                   alt=""
                   style={{ width: "100%", zIndex: "50" }}
@@ -79,16 +81,16 @@ const Introduction = () => {
                     movies.
                   </p>
                   <div className="social-btn">
-                    <a href="https://www.linkedin.com/in/mjubairahmed">
+                    <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/mjubairahmed">
                       <LinkedIn />
                     </a>
-                    <a href="https://www.github.com/mjahmed">
+                    <a rel="noreferrer" target="_blank" href="https://www.github.com/mjahmed">
                       <GitHub />
                     </a>
-                    <a href="https://www.facebook.com/mjubairahmed">
+                    <a rel="noreferrer" target="_blank" href="https://www.facebook.com/mjubairahmed">
                       <Facebook />
                     </a>
-                    <a href="https://www.twitter.com/mdjubairahmed">
+                    <a rel="noreferrer" target="_blank" href="https://www.twitter.com/mdjubairahmed">
                       <Twitter />
                     </a>
                   </div>
@@ -99,6 +101,7 @@ const Introduction = () => {
                       backgroundColor: "#009E66",
                       color: "white",
                     }}
+                    rel="noreferrer" target="_blank"
                     href="https://drive.google.com/uc?export=download&id=1aIXcyI-9aQlSD2EyXYWDZTvlHyXVcyWb"
                   >
                     Get Resume

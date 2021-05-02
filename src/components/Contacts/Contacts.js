@@ -55,7 +55,7 @@ const Contacts = () => {
         </p>
         <Grid container spacing={4}>
           <Grid item md={6} xs={12}>
-            <h4>Contact Me</h4>
+            <h4 className="pb-3 pt-5 pt-md-0">Contact Me</h4>
             <form onSubmit={sendEmail}>
               <div class="form-group">
                 <input
@@ -112,11 +112,11 @@ const Contacts = () => {
           <Grid item md={6} xs={12}>
             <h4 className="text-white pb-3 pt-5 pt-md-0"> Contact Info</h4>
             <h6 className="lead border-bottom mb-4 pb-3">
-              Name:{" "}
-              <span className="font-weight-bold"> Md Jubair Ahmed</span>
+              Name: <span className="font-weight-bold"> Md Jubair Ahmed</span>
             </h6>
             <h6 className="lead border-bottom mb-4 pb-3">
-              Location: <span className="font-weight-bold"> Shuloghor, Sunamganj</span>
+              Location:{" "}
+              <span className="font-weight-bold"> Shuloghor, Sunamganj</span>
             </h6>
             <h6 className="lead border-bottom mb-4 pb-3">
               Phone: <span className="font-weight-bold"> +8801782557441</span>
