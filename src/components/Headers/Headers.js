@@ -9,6 +9,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
 import HeadersMenu from "./HeadersMenu";
 import { Container } from "@material-ui/core";
+import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -80,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Headers = () => {
+  const history=useHistory()
   const classes = useStyles();
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -105,16 +107,16 @@ const Headers = () => {
       onClose={handleMobileMenuClose}
     >
       <MenuItem className={classes.navItem}>
-        <p>Home for the titens</p>
+        <p onClick={()=>history.push("/")}>Home</p>
       </MenuItem>
       <MenuItem className={classes.navItem}>
-        <p>Projects</p>
+        <p onClick={()=>history.push("/projects")}>Projects</p>
       </MenuItem>
       <MenuItem className={classes.navItem}>
-        <p>Blogs</p>
+        <p onClick={()=>history.push("/blog")}>Blogs</p>
       </MenuItem>
       <MenuItem className={classes.navItem}>
-        <p>Contact</p>
+        <p onClick={()=>history.push("/contact")}>Contact</p>
       </MenuItem>
     </Menu>
   );

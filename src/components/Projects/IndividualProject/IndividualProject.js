@@ -3,6 +3,7 @@ import React from "react";
 import { shadows } from '@material-ui/system';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ProjectImageSlider from "./ProjectImageSlider";
 AOS.init();
 
 const useStyles = makeStyles((theme) => ({
@@ -26,7 +27,10 @@ const IndividualProject = ({ projectData }) => {
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000">
       <Box boxShadow={3} p={5}>
-      <img src={image} alt="" style={{ width: "100%" }} />
+      {/* <img src={image} alt="" style={{ width: "100%" }} /> */}
+      <div style={{borderLeft:"5px solid #009E66"}}>
+      <ProjectImageSlider image={image}/>
+      </div>
       <h3 className="text-center">{title}</h3>
       <Divider p={5}/>
       <p>{description}</p>

@@ -1,8 +1,12 @@
 import { Button, Container, Grid } from "@material-ui/core";
 import React from "react";
 import IndividualProject from "./IndividualProject/IndividualProject";
-import imageFashionFare from "../../images/projects/fashionFare.png";
-import imageTravellersNest from "../../images/projects/travellersNest1.png"
+import imageFashionFare1 from "../../images/projects/fashionFare.png";
+import imageFashionFare2 from "../../images/projects/fashionFare2.png"
+import imageFashionFare3 from "../../images/projects/fashionFare3.png"
+import imageTravellersNest1 from "../../images/projects/travellersNest1.png"
+import imageTravellersNest2 from "../../images/projects/travellersNest2.png"
+import imageTravellersNest3 from "../../images/projects/travellersNest3.png"
 import { useHistory } from "react-router";
 
 const Projects = () => {
@@ -13,16 +17,16 @@ const Projects = () => {
       description: "Hotel Booking Website with dynamic Admin Panel and Payment Gateway",
       technology: ["React JS", "Node JS","Express", "Firebase", "Stripe", "MongoDB"],
       liveLink: "https://travellers-nest.web.app",
-      githubLink: "https://github.com",
-      image: imageTravellersNest,
+      githubLink: "https://github.com/mjahmed-wd/Travellers-Nest-Client",
+      image: [imageTravellersNest1,imageTravellersNest2,imageTravellersNest3]
     },
     {
       title: "Fashion Fare",
       description: "This is a online shopping site",
       technology: ["React JS", "Node JS", "Express", "Firebase", "MongoDB"],
       liveLink: "https://fashion-fare.web.app",
-      githubLink: "https://github.com",
-      image: imageFashionFare,
+      githubLink: "https://github.com/mjahmed-wd/Fashion-Fare-Client",
+      image: [imageFashionFare1,imageFashionFare2,imageFashionFare3]
     },
   ];
   return (

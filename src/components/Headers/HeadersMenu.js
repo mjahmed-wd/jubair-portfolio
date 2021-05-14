@@ -6,7 +6,17 @@ import { makeStyles } from "@material-ui/core";
 import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
- 
+  navItem:{
+    color:"#1C2A2B",
+    textDecoration:"none",
+    "&:hover":{
+      color:"#009E66",
+      textDecoration:"none"
+    }
+  },
+  ZoomNavigationMenu:{
+    backgroundColor:"green"
+  }
 }));
 const HeadersMenu = () => {
   const history=useHistory()

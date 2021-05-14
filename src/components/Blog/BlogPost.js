@@ -32,7 +32,8 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const BlogPost = () => {
+const BlogPost = ({post}) => {
+  const {postImgURL,postDate,postHeading,postBody,postURL}=post
   const styles = useStyles();
   const mediaStyles = useWideCardMediaStyles();
   const textCardContentStyles = useN01TextInfoContentStyles();
@@ -44,21 +45,23 @@ const BlogPost = () => {
         <CardMedia
           classes={mediaStyles}
           image={
-            "https://images.unsplash.com/photo-1468774871041-fc64dd5522f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80"
+            postImgURL
           }
         />
         <CardContent className={styles.content}>
           <TextInfoContent
             classes={textCardContentStyles}
-            overline={"March 20, 2019"}
-            heading={"What happened in Thailand?"}
+            overline={postDate}
+            heading={postHeading}
             body={
-              "Kayaks crowd Three Sisters Springs, where people and manatees maintain controversial coexistence."
+            postBody  
             }
           />
-          <Button color={"primary"} fullWidth className={styles.cta}>
+         <a rel="noreferrer" target="_blank" href={postURL}>
+         <Button color={"primary"} fullWidth className={styles.cta}>
             Find Out More <ChevronRightRounded />
           </Button>
+         </a>
         </CardContent>
       </Card>
     </Box>

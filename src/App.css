@@ -10,6 +10,9 @@ h6,
 p {
   margin: 0;
 }
+a,a:hover{
+  text-decoration: none;
+}
 button {
   cursor: pointer;
 }
