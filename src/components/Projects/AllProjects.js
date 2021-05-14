@@ -44,7 +44,7 @@ const AllProjects = () => {
       description: "Realtime Chatting Application",
       technology: ["React JS", "JavaScript","Firebase","Material UI"],
       liveLink: "https://sirajalislam.com",
-      githubLink: "https://github.com/mjahmed-wd/sirajalislam.com-client",
+      githubLink: "https://github.com/mjahmed-wd/whatsapp-clone",
       image: [imageWhatsApp1,imageWhatsApp2]
     },
   ];
