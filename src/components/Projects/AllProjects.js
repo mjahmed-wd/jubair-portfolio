@@ -27,7 +27,7 @@ const AllProjects = () => {
       title: "Fashion Fare",
       description: "This is a online shopping site",
       technology: ["React JS", "Node JS", "Express", "Firebase", "MongoDB"],
-      liveLink: "https://fashion-fare.web.app",
+      liveLink: "https://sirajalislam.com",
       githubLink: "https://github.com/mjahmed-wd/Fashion-Fare-Client",
       image: [imageFashionFare1,imageFashionFare2,imageFashionFare3]
     },
@@ -43,7 +43,7 @@ const AllProjects = () => {
       title: "WhatsApp Clone",
       description: "Realtime Chatting Application",
       technology: ["React JS", "JavaScript","Firebase","Material UI"],
-      liveLink: "https://sirajalislam.com",
+      liveLink: "https://fashion-fare.web.app",
       githubLink: "https://github.com/mjahmed-wd/whatsapp-clone",
       image: [imageWhatsApp1,imageWhatsApp2]
     },
